@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="output.css" rel="stylesheet" type="text/css">
+    <link href="../fonts/remixicon.css" rel="stylesheet" type="text/css">
+    <link href="swiper-bundle.min.css" rel="stylesheet" type="text/css">
+    <link href="slick.css" rel="stylesheet" type="text/css">
+    <link href="slick-theme.css" rel="stylesheet" type="text/css">
+   
+    <style>
+        .slider {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.slick-slide {
+  margin: 0 5px;
+}
+.slick-list {
+  margin: 0px -5px 0px -5px;
+}
+button.slick-next, button.slick-next:hover {
+  position: absolute;
+  top: 41%;
+  right: 54px;
+  width: 47px;
+  height: 75px;
+  background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
+  background-size: 95px;
+}
+button.slick-prev, button.slick-prev:hover {
+  position: absolute;
+  top: 41%;
+  left: 15px;
+  z-index: 1;
+  width: 47px;
+  height: 75px;
+  background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
+  background-size: 95px;
+      background-position-x: right;
+}
+.slick-prev:before, .slick-next:before {
+  font-size: 70px;
+  color: #EA8496;
+  line-height: inherit;
+  font-weight: bold;
+}
+.slider img {
+  height: auto;
+}
+
+/* Slick Slider Styles -- Provided by https://kenwheeler.github.io/slick/ */
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('http://maggiesadler.com/wp-content/uploads/2015/10/ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.eot');
+    src: url('file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.eot?#iefix') format('embedded-opentype'), url('file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.woff') format('woff'), url('file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.ttf') format('truetype'), url('file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.svg#slick') format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    padding: 0;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -25px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.slick-next
+{
+    right: -25px;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+.slick-next:before
+{
+    content: '';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '';
+}
+
+/* Dots */
+.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -45px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: black;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul .inner {
+  padding-left: 1em;
+  overflow: hidden;
+  display: none;
+}
+ul li a.toggle {
+  width: 100%;
+  display: block;
+  background: rgba(121, 120, 120, 0.175);
+  color:rgb(21, 21, 21);
+  padding: 0.75em;
+  border-radius: 0.15em;
+  transition: background 0.3s ease;
+  padding: 18px 10px;
+}
+
+@media(min-width:1024px){
+    .swiper-button-next, .swiper-button-prev{
+        display: block !important;
+    }
+}
+</style>
+</head>
+<body class="font-sans">
+
+  <header class=" px-5 fixed top-0 left-0 right-0 z-40 lg:bg-transparent bg-white">
+    <div class="container mx-auto">
+        <nav class="flex items-center justify-between py-6 text-zinc-200 text-lg">
+            <div>
+                <a href="javascript:void(0)">
+                    <img src="../img/logo-light.png" title="logo" alt="logo" class="hidden lg:block"/>
+                    <img src="../img/logo-dark.png" title="logo" alt="logo" class="lg:hidden"/>
+                </a>
+            </div>
+            <div class="absolute top-full left-0 right-0 z-10 bg-black hidden lg:static lg:block lg:bg-transparent">
+                <ul class="lg:flex">
+                    <li class="me-9 underline-offset-3 decoration- underline">Home</li>
+                    <li class="me-9">Feature</li>
+                    <li class="me-9">Screenshots</li>
+                    <li class="me-9">Testimonial</li>
+                    <li class="me-9">Pricing</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+            <div class="flex">
+                <button class="me-4 text-black lg:text-white">Login</button>
+                <a href="javascript:void(0)"  class="py-2 px-6 border-stone-400 border lg:text-white text-black">Sign Up</a>
+                <a href="javascript:void(0)" class="rounded-md border-stone-500 border  p-3 ms-2 lg:hidden  "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-950">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+  </header>
+
+  <!-- MAIN -->
+
+ <main>
+
+    <section class="banner swiper mySwiper w-full h-full mx-auto ">
+        <div class=" swiper-wrapper w-full h-full">
+            <div class="banner-items swiper-slide text-center h-full w-full " style="background-image: url(../img/slider-1.jpg); width: 100%; height: 100vh; object-fit: cover;">
+                <div class="flex justify-center items-center px-4 h-full w-full before:absolute before:h-full before:z-10 before:w-full before:bg-black/70 before:[content]">
+                    <div class="banner-content text-center mx-auto my-auto z-50" style="max-width: 700px;">
+                        <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-center mx-auto mb-12">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 fill-white stroke-none ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                              </svg>
+                        </div>
+    
+                        <h2 class="text-5xl font-semibold text-white ">Integrate
+                            Salesforce with The Apps You Use.</h2>
+                            <p class="text-base font-normal text-white/60 mt-10 mb-10" style="max-width: 650px;">
+                                At vero eos et accusamus et iusto
+                                        odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atqued
+                                        corrupti quos dolores et quas molestias excepturi sintoccaecati cupiditate.
+                            </p>
+                            <a href="javascript:void(0)" class="py-3 px-7 rounded-md bg-blue-600 text-white inline-block">GET STARTED</a>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-items swiper-slide text-center h-full w-full " style="background-image: url(../img/slider-1.jpg); width: 100%; height: 100vh; object-fit: cover;">
+                <div class="flex justify-center items-center h-full w-full before:absolute before:h-full before:z-10 before:w-full before:bg-black/70 before:[content]">
+                    <div class="banner-content text-center mx-auto my-auto z-50" style="max-width: 700px;">
+                        <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-center mx-auto mb-12">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 fill-white stroke-none ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                              </svg>
+                        </div>
+    
+                        <h2 class="text-5xl font-semibold text-white ">Integrate
+                            Salesforce with The Apps You Use.</h2>
+                            <p class="text-base font-normal text-white/60 mt-10 mb-10" style="max-width: 650px;">
+                                At vero eos et accusamus et iusto
+                                        odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atqued
+                                        corrupti quos dolores et quas molestias excepturi sintoccaecati cupiditate.
+                            </p>
+                            <a href="javascript:void(0)" class="py-3 px-7 rounded-md bg-blue-600 text-white inline-block">GET STARTED</a>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-items swiper-slide text-center h-full w-full " style="background-image: url(../img/slider-1.jpg); width: 100%; height: 100vh; object-fit: cover;">
+                <div class="flex justify-center items-center h-full w-full before:absolute before:h-full before:z-10 before:w-full before:bg-black/70 before:[content]">
+                    <div class="banner-content text-center mx-auto my-auto z-50" style="max-width: 700px;">
+                        <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-center mx-auto mb-12">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 fill-white stroke-none ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                              </svg>
+                        </div>
+    
+                        <h2 class="text-5xl font-semibold text-white ">Integrate
+                            Salesforce with The Apps You Use.</h2>
+                            <p class="text-base font-normal text-white/60 mt-10 mb-10" style="max-width: 650px;">
+                                At vero eos et accusamus et iusto
+                                        odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atqued
+                                        corrupti quos dolores et quas molestias excepturi sintoccaecati cupiditate.
+                            </p>
+                            <a href="javascript:void(0)" class="py-3 px-7 rounded-md bg-blue-600 text-white inline-block">GET STARTED</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next text-center after:hidden me-32 rotate-45" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-42a4bf7279430784" style=" height: 50px; width: 50px; border-radius: 10%; border: 1px solid gray; color: white; background-color: rgba(245, 241, 241, 0.1); display: none;">
+            
+            <i class="ri-arrow-right-fill  inline-block leading-[50px] -rotate-45 text-2xl"></i>
+        </div>
+        <div class="swiper-button-prev text-center after:hidden ms-32 rotate-45" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-42a4bf7279430784" style="height: 50px; width: 50px; border-radius: 10%; border: 1px solid gray; color: white; background-color: rgba(245, 241, 241, 0.1); display: none;">
+            <i class="ri-arrow-left-fill inline-block leading-[50px]  -rotate-45 text-2xl"></i>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+<!-- WORK -->
+
+<section class="work py-20">
+    <div class="container mx-auto">
+        <div class="work-title text-center mx-auto mb-20">
+            <h6>HOW IT <span class="font-semibold">WORK</span></h6>
+            <h2 class="font-semibold text-4xl my-4 text-stone-900 text">How dose it work ?</h2>
+            <p class="text-gray-600 max-w-lg mx-auto">Sed ut perspiciatis unde omnis iste natus error  voluptatem accusantium doloremque rem aperiam.</p>
+        </div>
+
+    <div class="work-items">
+        <div class="flex flex-wrap">
+            <div class="w-full md:w-3/6 lg:w-1/3">
+                <div class="work-content text-center relative mb-5">
+                    <span class="inline-flex relative z-0 bg-blue-500/20 dark:bg-blue-100/5 h-24 w-24 items-center justify-center" style="border-radius: 28% 72% 50% 50%/26% 20% 80% 74%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                          </svg>
+
+                    </span>
+                    <h5 class="text-xl font-semibold mb-3 mt-5">1. Intuitive visual editor</h5>
+                    <p class="max-w-sm mx-auto text-gray-500">Nemo enim ipsam quia voluptas sit
+                        aspernatur ist dolores.</p>
+
+                    <img src="../img/arrow-top.png" title="arrow-top" alt="arrow-top" class="hidden absolute -right-12 top-2/4 lg:block"/>
+
+                </div>
+            </div>
+            <div class="w-full md:w-3/6 lg:w-1/3">
+                <div class="work-content text-center relative mb-5">
+
+                    <span class="inline-flex relative z-0 bg-emerald-500/20 dark:bg-emerald-100/5 h-24 w-24 items-center justify-center" style="border-radius: 28% 72% 50% 50%/26% 20% 80% 74%;">
+                        <i class="ri-palette-line text-5xl"></i>
+
+                    </span>
+                    <h5 class="text-xl font-semibold mb-3 mt-5">2. Huge design collection</h5>
+                    <p class="max-w-sm mx-auto text-gray-500">Nemo enim ipsam quia voluptas sit
+                        aspernatur ist dolores.</p>
+                        <img src="../img/arrow-bottom.png" title="arrow-bottom" alt="arrow-bottom" class="hidden absolute -right-12 top-2/4 lg:block"/>
+                </div>
+            </div>
+            <div class="w-full md:w-3/6 lg:w-1/3">
+                <div class="work-content work-title text-center">
+                    <span class="inline-flex relative z-0 bg-amber-500/20 dark:bg-amber-100/5 h-24 w-24 items-center justify-center" style="border-radius: 28% 72% 50% 50%/26% 20% 80% 74%;">
+                        <i class="ri-stack-fill text-5xl"></i>
+
+                    </span>
+                    <h5 class="text-xl font-semibold mb-3 mt-5">3. One click installation</h5>
+                    <p class="max-w-sm mx-auto text-gray-500">Nemo enim ipsam quia voluptas sit
+                        aspernatur ist dolores.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- FEATURE -->
+
+<section class="feature bg-gray-50 py-5">
+    <div class="container mx-auto">
+
+         <div class="feature-title text-center mx-auto mb-10">
+            <h6>OUR <span class="font-semibold">FEATURES</span></h6>
+            <h2 class="font-semibold text-4xl my-4 text-stone-900 text">Smart Solutions For Buys People</h2>
+            <p class="text-gray-600 max-w-lg mx-auto">Sed ut perspiciatis unde omnis iste natus error  voluptatem accusantium doloremque rem aperiam.</p>
+        </div>
+        <div class="flex flex-wrap lg:items-center">
+            <div class="w-full lg:w-1/2">
+                <div class="feature-img  px-5">
+                    <img src="../img/features-1.png" title="features-1" alt="features-1" class="w-full h-full object-cover"/>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2">
+                <div class="feature-items px-5">
+                    <h2 class="text-4xl font-semibold mb-9">Discover your destination</h2>
+                    <p class="text-gray-600 mb-7">
+                        On the other hand, we denounce with righteous indignation so blinded that they cannot.
+                    </p>
+                    <ul class="flex mb-9">
+                        <li class="w-10 h-8 rounded-full shadow-lg bg-white flex items-center justify-center me-7">
+                            <i class="ri-check-line text-blue-600"></i>
+                        </li>
+                        <li>
+                            <p class="text-gray-600">
+                                <span class="font-bold text-gray-900">The wise a
+                                therefore always holds</span>
+                                 in us matters to this principle a selection a rejects pleasures.</p>
+                        </li>
+                    </ul>
+                    <ul class="flex mb-9">
+                        <li class="w-12 h-8 rounded-full shadow-lg bg-white flex items-center justify-center p-2 me-6">
+                            <i class="ri-stack-fill text-blue-600"></i>
+                        </li>
+                        <li>
+                            <p class="text-gray-600">Sed perspiciatis omnis a
+                                <span class="font-bold text-gray-900">natus error accusantium doloremque</span>
+                                laudantium
+                                tota rem aperiam eaque ipsa quae illo inventore.</p>
+                        </li>
+                    </ul>
+                    <ul class="flex">
+                        <li class="w-10 h-8 rounded-full shadow-lg bg-white flex items-center justify-center px-2 me-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-blue-600">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                              </svg>
+
+                        </li>
+                        <li>
+                            <p class="text-gray-600">
+                                <span class="font-bold text-gray-900">The wise a
+                                therefore always holds</span>
+                                 in us matters to this principle a selection a rejects pleasures.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PLACES -->
+
+<section class="place bg-gray-50 relative bg-no-repeat bg-cover pt-10" style="background: url(../img/features-bg.png);">
+    <div class="container mx-auto"> 
+        <div class="flex flex-wrap lg:items-center">
+            <div class="w-full lg:w-1/2">
+                <div class="place-items px-5 mb-6">
+                    <h2 class="text-4xl font-semibold mb-9">Connecting people, Places</h2>
+                    <p class="text-gray-600 mb-7">
+                        On the other hand, we denounce with righteous indignation so blinded that they cannot.
+                    </p>
+                    <ul class="flex mb-9">
+                        <li class="w-10 h-8 rounded-full shadow-lg bg-white flex items-center justify-center me-7">
+                            <i class="ri-check-line text-blue-600"></i>
+                        </li>
+                        <li>
+                            <p class="text-gray-600">
+                                <span class="font-bold text-gray-900">The wise a
+                                therefore always holds</span>
+                                 in us matters to this principle a selection a rejects pleasures.</p>
+                        </li>
+                    </ul>
+                    <ul class="flex mb-9">
+                        <li class="w-12 h-9 rounded-full shadow-lg bg-white flex items-center justify-center p-2 me-6">
+                            <i class="ri-stack-fill text-blue-600"></i>
+                        </li>
+                        <li>
+                            <p class="text-gray-600">Sed perspiciatis omnis a
+                                <span class="font-bold text-gray-900">natus error accusantium doloremque</span>
+                                laudantium
+                                tota rem aperiam eaque ipsa quae illo inventore.</p>
+                        </li>
+                    </ul>
+                    <ul class="flex">
+                        <li class="w-10 h-8 rounded-full shadow-lg bg-white flex items-center justify-center px-2 me-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-blue-600">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                              </svg>
+
+                        </li>
+                        <li>
+                            <p class="text-gray-600">
+                                <span class="font-bold text-gray-900">The wise a
+                                therefore always holds</span>
+                                 in us matters to this principle a selection a rejects pleasures.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2">
+                <div class="place-img px-5">
+                    <img src="../img/features-1.png" title="features-1" alt="features-1" class="w-full h-full object-cover"/>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!-- COUNTER -->
+
+<section class="counter relative py-32 bg-cover bg-top z-10" style="background-image: url(../img/counter-bg.jpg); background-attachment: fixed;">
+    <div class="absolute inset-0 w-full h-full bg-gray-900/70 -z-10"></div>
+    <div class="container mx-auto">
+        <div class="flex flex-wrap px-5 ">
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <div class="counter-items border border-gray-500 rounded-lg text-white bg-gray-500/40 p-5 mb-5 md:me-5  ">
+                    <ul class="flex items-center">
+                        <li class="me-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-10 w-10 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                              </svg>
+                              
+                        </li>
+                        <li>
+                            <h2 class="text-4xl text-white">825</h2>
+                            <p class="text-xl">Global Brands</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <div class="counter-items border border-gray-500 rounded-lg text-white bg-gray-500/40 p-5 mb-5 lg:me-5 ">
+                    <ul class="flex items-center">
+                        <li class="me-5">
+                            <i class="ri-emotion-happy-fill text-4xl text-white"></i>
+                              
+                              
+                        </li>
+                        <li>
+                            <h2 class="text-4xl text-white">1800+</h2>
+                            <p class="text-xl">Happy Clients</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <div class="counter-items border border-gray-500 rounded-lg text-white bg-gray-500/40 p-5 mb-5 md:me-5 ">
+                    <ul class="flex items-center">
+                        <li class="me-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 fill-white">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                              </svg>      
+                        </li>
+                        <li>
+                            <h2 class="text-4xl text-white">599+</h2>
+                            <p class="text-xl">Global Brands</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <div class="counter-items border border-gray-500 rounded-lg text-white bg-gray-500/40 p-5 ">
+                    <ul class="flex items-center">
+                        <li class="me-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
+                              </svg>
+                        </li>
+                        <li>
+                            <h2 class="text-4xl text-white">2000+</h2>
+                            <p class="text-xl">USER CLIENTS</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</section>
+
+<!-- SCREENSHOT -->
+
+<section class="screenshot py-20">
+<div class="container mx-auto">
+    <div class="screenshot-title text-center  mx-auto max-w-xl mb-10">
+        <h6>APP <span class="font-semibold">Screens </span></h6>
+
+        <h2 class="text-3xl font-semibold mb-3">Awesome Screenshot</h2>
+        <p class="font-normal text-gray-500">Sed ut perspiciatis unde omnis iste natus error
+            voluptatem accusantium doloremque rem aperiam.</p>
+    </div>
+    <div class="screenshot-slider slider">
+        <img src="../img/screeshot-1.jpg" title="screeshot-1" alt="screeshot-1" class="object-cover"/>
+        <img src="../img/screeshot-2.jpg" title="screeshot-2" alt="screeshot-2" class="object-cover"/>
+        <img src="../img/screeshot-3.jpg" title="screeshot-3" alt="screeshot-3" class="object-cover"/>
+        <img src="../img/screeshot-4.jpg" title="screeshot-4" alt="screeshot-4" class="object-cover"/>
+        <img src="../img/screeshot-1.jpg" title="screeshot-1" alt="screeshot-1" class="object-cover"/>
+        <img src="../img/screeshot-2.jpg" title="screeshot-2" alt="screeshot-2" class="object-cover"/>
+        <img src="../img/screeshot-3.jpg" title="screeshot-3" alt="screeshot-3" class="object-cover"/>
+
+  </div>
+</div>
+</section>
+
+<!-- TESTIMONIAL -->
+
+<section class="testimonial py-20">
+    <div class="container mx-auto">
+        <div class="testimonial-title text-center  mx-auto max-w-xl mb-9">
+            <h6 class="mb-3">OUR <span class="font-semibold">TESTIMONIAL </span></h6>
+    
+            <h2 class="text-3xl font-semibold mb-3">What Our Customers Say</h2>
+            <p class="font-normal text-gray-500">Sed ut perspiciatis unde omnis iste natus error
+                voluptatem accusantium doloremque rem aperiam.</p>
+        </div>
+        <div class="text-center  mx-auto max-w-xl">
+            <p class=" text-gray-500 mb-6">“Itaque earum us tenetur sapiente delectus asperiores
+                repellat.”</p>
+            <h5 class="text-lg mb-5 ">At vero eos et accusamus iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atqued corrupti as quos dolores quas molestias
+                excepturi occaecati provident.</h5>
+            <img src="../img/testimonial.jpg" title="testimonial" alt="testimonial" class="mx-auto rounded-full h-16"/>
+            <h5 class="text-base font-medium mt-6">Mayra Vasquez</h5>
+            <p class="text-sm font-normal text-gray-500 mt-1">Web Development, USA</p>
+        </div>
+    </div>
+    <div class="testimonial-imgs">
+        <div class="flex flex-wrap justify-center mt-20">
+            <div class="w-64">
+                <img src="../img/dribbble.png" title="dribbble" alt="dribbble" class="h-12 mx-auto mb-5"/>
+            </div>
+            <div class="w-64">
+                <img src="../img/insta.png" title="insta" alt="insta" class="h-12 mx-auto mb-5"/>
+            </div>
+            <div class="w-64">
+                <img src="../img/jquery.png" title="jquery" alt="jquery" class="h-12 mx-auto"/>
+            </div>
+            <div class="w-64">
+                <img src="../img/bootstrap.png" title="bootstrap" alt="bootstrap" class="h-12 mx-auto"/>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- PRICING -->
+
+    <section class="pricing py-20">
+        <div class="container mx-auto">
+            <div class="pricing-title text-center  mx-auto max-w-xl">
+                <h6 class="mb-3">OUR <span class="font-semibold">PRICING </span></h6>
+        
+                <h2 class="text-3xl font-semibold mb-3">Pricing Plan</h2>
+                <p class="font-normal text-gray-500">Sed ut perspiciatis unde omnis iste natus error
+                    voluptatem accusantium doloremque rem aperiam.</p>
+            </div>
+            <div class="flex justify-center my-10">
+                <div class="pricing-btn inline-block border p-2 rounded-full bg-gray-500/10">
+                    <div class="flex items-center">
+                        <button class="py-2 px-4 rounded-full text-white bg-blue-600">Monthly</button>
+                        <button class="py-2 px-4 rounded-full  "> Yearly</button>
+                    </div>
+                </div>
+            </div>
+            
+        
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2 lg:w-1/3">
+                    <div class="pricing-items p-10 rounded-md shadow-lg relative mb-5 md:me-2">
+                        
+                        <div class="p-7 rounded-md text-center bg-gray-50">
+                            <h5 class="text-lg font-medium">Free</h5>
+                            <h2 class="text-4xl font-semibold text-blue-600">$0.00 <span class="text-base font-normal text-gray-500">/Month</span></h2>
+                        </div>
+                        <div class=" mt-5">
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">3</span> Projects</p>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">580GB</span>  Storage</p>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">Unlimited</span>  Contacts</p>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">5</span> Domains</p>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">Free Support </span>24/7</p>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                        <div>
+                            <a href="javascript:void(0)" class="py-2   flex justify-center  rounded-md text-base  text-white bg-blue-600">Choose
+                                Plan</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3">
+                    <div class="pricing-items p-10 rounded-md shadow-lg relative mb-5 md:ms-2 overflow-hidden">
+                        <div class="absolute right-0 top-0 h-16 w-16 z-10">
+                            <div class="absolute rotate-45 bg-red-600 text-center text-white font-normal text-sm py-0.5 right-[-35px] top-[32px] w-[170px] shadow-lg">
+                                
+                                Most Popular
+                            
+                            </div>
+                        </div>
+                        <div class="p-7 rounded-md text-center bg-gray-50">
+                            <h5 class="text-lg font-medium">Standard</h5>
+                            <h2 class="text-4xl font-semibold text-blue-600">$29.00 <span class="text-base font-normal text-gray-500">/Month</span></h2>
+                        </div>
+                        <div class=" mt-5">
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">10</span> Projects</p>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">1TB</span>  Storage</p>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">Unlimited</span>  Contacts</p>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">12</span> Domains</p>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">Free Support </span>24/7</p>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                        <div>
+                            <a href="javascript:void(0)" class="py-2   flex justify-center  rounded-md text-base  text-white bg-blue-600">Choose
+                                Plan</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3">
+                    <div class="pricing-items p-10 rounded-md shadow-lg relative lg:ms-4">
+                        <div class="p-7 rounded-md text-center bg-gray-50">
+                            <h5 class="text-lg font-medium">Enterprice</h5>
+                            <h2 class="text-4xl font-semibold text-blue-600">$49.00 <span class="text-base font-normal text-gray-500">/Month</span></h2>
+                        </div>
+                        <div class=" mt-5">
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">20</span> Projects</p>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">2.5TB</span>  Storage</p>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">Unlimited</span>  Contacts</p>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">18</span> Domains</p>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center mb-5">
+                                <li class="me-3"><i class="ri-check-line text-lg text-gray-500"></i></li>
+                                <li>
+                                    <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-800">Free Support </span>24/7</p>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                        <div>
+                            <a href="javascript:void(0)" class="py-2   flex justify-center  rounded-md text-base  text-white bg-blue-600">Choose
+                                Plan</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- FAQ -->
+
+<section class="faq py-20  bg-gray-50">
+    <div class="container mx-auto">
+        <div class="faq-title text-center  mx-auto max-w-xl mb-10">
+            <h6>OUR <span class="font-semibold">FAQS </span></h6>
+    
+            <h2 class="text-3xl font-semibold my-3">Frequently Asked Questions</h2>
+            <p class="font-normal text-gray-500">Sed ut perspiciatis unde omnis iste natus error
+                voluptatem accusantium doloremque rem aperiam.</p>
+        </div>
+        <div class="flex flex-wrap lg:items-center">
+            <div class="w-full md:w-1/2">
+                <div class="faq-img p-5 lg:p-10">
+                    <img src="../img/faq.png" title="faq" alt="faq" class="w-full "/>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <div class="faq-items px-5">
+                    <ul class="accordion py-9">
+                        <li class="mb-5">
+                          <a class="toggle bg-gray-400" href=#>
+                            How to install App?
+                          </a>
+                          <p class="inner">
+                            
+                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci
+                            velit sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+                            aliquam quaerat voluptatem.
+                        
+                          </p>
+                        </li>
+                        
+                        <li class="mb-5">
+                          <a class="toggle" href=#>
+                            How do I get the Mobile App for my phone?
+                            </a>
+                          <p class="inner">
+                            
+                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+                            excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia deserunt mollitia animi, id est
+                            laborum et dolorum fuga.
+                        
+                          </p>
+                        </li>
+                        
+                        <li class="mb-5">
+                          <a class="toggle" href=#>
+                            Whats special about Appexy?
+                            </a>
+                          <p class="inner">
+                            
+                            Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
+                            maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                        
+                          </p>
+                        </li>
+                        
+                        <li class="mb-5">
+                          <a class="toggle" href=#>
+                            How much does Appexy cost?
+                            </a>
+                          <p class="inner">
+                            
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                            veritatis et quasi architecto beatae vitae dicta
+                            sunt explicabo.
+                        
+                          </p>
+                        </li>
+                        <li class="mb-5">
+                            <a class="toggle" href=#>
+                                How do I disable installed apps?
+                             </a>
+                            <p class="inner">
+                              
+                              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                              veritatis et quasi architecto beatae vitae dicta
+                              sunt explicabo.
+                          
+                            </p>
+                          </li>
+                          <li class="mb-5">
+                            <a class="toggle" href=#>
+                                What about the security of my payments?
+                            </a>
+                            <p class="inner">
+                              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                            </p>
+                          </li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PHONE -->
+
+<section class="phone py-20" >
+    <div class="container mx-auto">
+        <div class="phone-title text-center  mx-auto max-w-xl mb-10">
+    
+            <h2 class="text-5xl font-semibold mb-5">Available For Your Smartphone.</h2>
+            <p class="font-normal text-gray-500">The wise man therefore always holds in these matters
+                to this of selection he rejects pleasures to other greater that id pains to avoid worse.</p>
+        </div>
+        <div class="phone-imgs flex flex-wrap items-center justify-center  mt-12">
+            <a href="javascript:void(0)" class="shadow-xl me-5">
+                <img src="../img/i-store.png"/>
+            </a>
+            <a href="javascript:void(0)" title="i-store" alt="i-store"  class="shadow-xl">
+                <img src="../img/play-store.png" title="play-store" alt="play-store"/>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT US -->
+
+<section class="contact-us py-20 bg-gray-50">
+    <div class="container mx-auto">
+        <div class="contact-title text-center  mx-auto max-w-xl mb-16">
+            <h6>OUR <span class="font-semibold">Contact Us</span></h6>
+    
+            <h2 class="text-3xl font-semibold my-3">Get in Touch</h2>
+            <p class="font-normal text-gray-500">Sed ut perspiciatis unde omnis iste natus error
+                voluptatem accusantium doloremque rem aperiam.</p>
+        </div>
+        <div class="flex flex-wrap md:items-center">
+            <div class="w-full md:w-1/2">
+               <div class="contact-items px-5">
+                <ul class="flex items-center">
+                    <li class="me-5"><img src="../img/hello-icon.png" title="hello-icon" alt="hello-icon" class="h-20"/></li>
+                    <li><h2 class="text-3xl font-semibold">Say Hello!</h2></li>
+                </ul>
+                <ul class="flex items-center mt-8">
+                    <li class="h-10 w-10 rounded-md bg-blue-100 me-6  text-blue-600 flex items-center justify-center"><i class="ri-mail-fill mdi mdi-email text-2xl text-blue-600"></i></li>
+                    <li><h4 class="text-xl font-medium">Email</h4></li>
+                </ul>
+                <p class="flex items-center  text-gray-500 mt-4">
+                    <i class="ri-arrow-right-line me-2"></i>
+                    <a href="javascrip:void(0)">JuanaMRush@jourrapide.com</a>
+                </p>
+                <p class="flex items-center  text-gray-500 mt-4">
+                    <i class="ri-arrow-right-line me-2"></i>
+                    <a href="javascrip:void(0)">BrandonDBrown@jourrapide.com</a>
+                </p>
+                <ul class="flex items-center mt-10">
+                    <li class="h-10 w-10 rounded-md bg-blue-100 me-6  text-blue-600 flex items-center justify-center"><i class="ri-phone-fill text-2xl text-blue-600"></i></li>
+                    <li><h4 class="text-xl font-medium">Phone</h4></li>
+                </ul>
+                <p class="flex items-center  text-gray-500 mt-4">
+                    <i class="ri-arrow-right-line me-2"></i>
+                    <a href="javascrip:void(0)">(+01) 1234 5678 00</a>
+                </p>
+                <p class="flex items-center text-gray-500 mt-4">
+                    <i class="ri-arrow-right-line me-2"></i>
+                    <a href="javascrip:void(0)">(+01) 1234 5678 00</a>
+                </p>
+                <ul class="flex items-center mt-10">
+                    <li class="h-10 w-10 rounded-md bg-blue-100 me-6  text-blue-600 flex items-center justify-center"><i class="ri-map-pin-2-fill  text-2xl text-blue-600"></i></li>
+                    <li><h4 class="text-xl font-medium">Phone</h4></li>
+                </ul>
+                <h5 class="flex items-center text-gray-950 mt-4 mb-2">
+                    <i class="ri-arrow-right-line me-2"></i>
+                    <a href="javascrip:void(0)"> New York Office</a>
+                </h5>
+                <p class="text-gray-500">331 Maple Street, Monroe Avenue, CA 90017</p>
+                <h5 class="flex items-center text-gray-950 mt-4 mb-2">
+                    <i class="ri-arrow-right-line me-2"></i>
+                    <a href="javascrip:void(0)">Anguilla Office</a>
+                </h5>
+                <p class="text-gray-500">2118 Bird Spring, Creek Road, TX 77388</p>
+            </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <div class="contact-items p-5 rounded-md shadow-lg bg-white">
+                    <form>
+                        <div class="flex gap-4 mb-5">
+                            <div class="w-1/2">
+                                 <div>
+                                    <label class="block text-sm/normal font-semibold text-gray-500 mb-2">First Name</label>
+                                    <input type="text" class="block w-full text-sm rounded-md py-2 px-3 border border-slate-300" placeholder="Your first name...">
+                                   </div>
+                                 </div>
+                            <div class="w-1/2">
+                                <div>
+                                    <label class="block text-sm/normal font-semibold text-gray-500 mb-2">First Name</label>
+                                    <input type="text" class="block w-full text-sm rounded-md py-2 px-3 border border-slate-300" placeholder="Your last name...">
+                                   </div>
+                            </div>
+                            
+                        </div>
+                        <div class="flex gap-4 mb-5">
+                            <div class="w-1/2">
+                                 <div>
+                                    <label class="block text-sm/normal font-semibold text-gray-500 mb-2">Email address</label>
+                                    <input type="text" class="block w-full text-sm rounded-md py-2 px-3 border border-slate-300" placeholder="Your Email...">
+                                   </div>
+                                 </div>
+                            <div class="w-1/2">
+                                <div>
+                                    <label class="block text-sm/normal font-semibold text-gray-500 mb-2">Phone number</label>
+                                    <input type="text" class="block w-full text-sm rounded-md py-2 px-3 border border-slate-300" placeholder="Type phone number...">
+                                   </div>
+                            </div>
+                            
+                        </div>
+                        <div class="mb-5">
+                            <label class="block text-sm/normal font-semibold text-gray-500 mb-2">Subject</label>
+                            <input type="text" class="block w-full text-sm rounded-md py-2 px-3 border border-slate-300" placeholder="Type phone number...">
+                        </div>
+                        <div class="mb-5">
+                            <label class="block text-sm/normal font-semibold text-gray-500 mb-2">Massage</label>
+                            <textarea class="block w-full text-sm rounded-md py-2 px-3 border border-slate-300" placeholder="Type messages..."></textarea>
+                        </div>
+                        <button class="py-2 px-6 rounded-md text-white bg-gradient-to-r from-rose-600 to-rose-300">
+                            Send Messages <i class="ri-send-plane-2-fill"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer pt-14 bg-center bg-no-repeat bg-[#343a40]" style="background-image: url(../img/footer-light-bg.png);">
+    <div class="container mx-auto">
+            <div class="flex flex-wrap px-5">
+                <div class="w-full md:w-2/6 lg:w-1/5">
+                    <div class="footer-items mb-5 ">
+                        <a href="javascript:void(0)" class="flex">
+                            <img src="../img/footer-logo.png" alt="footer-logo" title="footer-logo"/>
+                        </a>
+                        <div class="my-6">
+                            <a href="javascript:void(0)" class="text-slate-100">
+                                Hello@coderthemes.com
+                            </a>
+                            <p class="text-slate-200">+01 ( 1234 567 890 )</p>
+                        </div>
+                        <h5 class="text-white text-xl font-semibold mb-4">Follow Us</h5>
+                        <ul class="flex flex-wrap">
+                            
+                            <li class="me-1"><a href="javascript:void(0)" class=" bg-gray-400/30 hover:bg-white text-white hover:text-blue-600 hover:shadow-sm transition-all duration-300 h-10 w-10 rounded-md flex justify-center items-center"><i class="ri-facebook-circle-fill text-xl"></i></a></li>
+                            <li class="me-1"><a href="javascript:void(0)" class=" bg-gray-400/30 hover:bg-white text-white hover:text-blue-600 hover:shadow-sm transition-all duration-300 h-10 w-10 rounded-md flex justify-center items-center"><i class="ri-twitter-fill text-xl"></i></a></li>
+                            <li class="me-1"><a href="javascript:void(0)" class=" bg-gray-400/30 hover:bg-white text-white hover:text-blue-600 hover:shadow-sm transition-all duration-300 h-10 w-10 rounded-md flex justify-center items-center"><i class="ri-instagram-fill text-xl"></i></a></li>
+                            <li><a href="javascript:void(0)" class=" bg-gray-400/30 hover:bg-white text-white hover:text-blue-600 hover:shadow-sm transition-all duration-300 h-10 w-10 rounded-md flex justify-center items-center"><i class="ri-skype-fill text-xl"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/6 lg:w-1/5">
+                    <div class="footer-items mb-5">
+                        <div class=" flex ">
+                            <ul>
+                                <h5 class="text-white text-xl mb-4">About Us</h5>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Support Center</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Customer Support</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">About Us</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Popular Campaign</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Copyright</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/6 lg:w-1/5">
+                    <div class="footer-items mb-5">
+                        <div class="flex">
+                            <ul>
+                                <h5 class="text-white text-xl mb-4">Our Information</h5>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Return Policy</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Privacy Policy</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Terms & Conditions</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Site Map</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Store Hours</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/6 lg:w-1/5">
+                    <div class="footer-items mb-5">
+                        <div class="flex">
+                            <ul>
+                                <h5 class="text-white text-xl mb-4">My Account</h5>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Press Inquiries</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Social Media Directories</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Images & B-roll</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Permissions</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Speaker Requests</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                    
+                <div class="w-full md:w-2/6 lg:w-1/5">
+                    <div class="footer-items">
+                        <div class="flex">
+                            <ul>
+                                <h5 class="text-white text-xl mb-4">Policy</h5>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Application Security</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Softwere Principles</a>
+                                </li>
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Softwere Policy</a>
+                                </li>
+                                
+                                <li class="mb-5">
+                                    <a href="javascript:void(0)" class="text-centers text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Risponsible Supply Chainn</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+<!-- COPYRIGHT -->
+
+<div class="bg-[#484d53] py-3 px-5 text-white/75">
+    <div class="container mx-auto">
+        <div class="flex justify-between">
+           <p>2023 © Appexy -<a href="javascript:void(0)">Coderthemes.com</a> </p>
+           <p><a href="javascript:void(0)">Terms Conditions & Policy</a></p>
+        </div>
+    </div>
+</div>
+</footer>
+
+<script src="../js/swiper-bundle.min.js"></script>
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery-3.7.1.min.js"></script>
+
+<script src="../js/slick.min.js"></script>
+
+<script src="../js/slider.js"></script>
+
+</body>
+</html>
